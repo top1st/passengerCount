@@ -16,12 +16,12 @@ public:
 	std::vector<cv::Point> currentContour;
 	cv::Rect currentBoundingRect;
 	std::vector<cv::Point> centerPositions;
+	double dbSize;
 
-		
-	
 	//
 public:
-	Blob();
+	Blob(std::vector<cv::Point> _contour);
+	void predictNextPosition(void);
 	~Blob();
 };
 #endif    // MY_BLOB
